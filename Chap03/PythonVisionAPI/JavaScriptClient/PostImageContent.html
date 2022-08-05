@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Post Image Content to Azure Vision API:</h1>
+    Image to read:
+    <input type="file" id="inputImage" />
+    <img id="imgPreview" src="images/NoImage.png"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script>
+        document.querySelector('#inputImage').addEventListener('change', function () {
+            var reader = new FileReader();
+            reader.onload = function () {
+                var arrayBuffer = this.result;
+                var arrayBufferView = new Uint8Array(arrayBuffer);
+                var blob = new Blob([arrayBufferView], { type: "image/jpeg" });
+                var urlCreator = window.URL || window.webkitURL;
+                var imageUrl = urlCreator.createObjectURL(blob);
+                $("#imgPreview").attr('src', imageUrl);
+                var subscriptionKey = "c1e3487599654d7fb99ab56120315be3";
+                var uriBase = "https://msit129visionclient1.cognitiveservices.azure.com/vision/v3.1/analyze";
+                var params = {
+                    "visualFeatures": "Categories,Description",
+                    "details": "Landmarks",
+                    "language": "en",
+                };
+                $.ajax({
+                    url: uriBase + "?" + $.param(params),
+                    beforeSend: function (jqXHR) {
+                        jqXHR.setRequestHeader("Content-Type", "application/octet-stream");
+                        jqXHR.setRequestHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
+                    },
+                    type: "POST",
+                    processData: false,
+                    data: arrayBuffer
+                })
+                    .done(function (data, textStatus, jqXHR) {
+                        //alert(JSON.stringify(data));
+                        alert(data["description"]["captions"][0]["text"]);
+                    })
+                    .fail(function (jqXHR, textStatus, errorThrown) {
+                        alert(errorThrown);
+                    });
+            }
+            reader.readAsArrayBuffer(this.files[0]);
+        }, false);
+    </script>
+
+</body>
+</html>

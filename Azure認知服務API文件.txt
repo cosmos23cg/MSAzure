@@ -1,0 +1,1 @@
+https://westus.dev.cognitive.microsoft.com/docs/services

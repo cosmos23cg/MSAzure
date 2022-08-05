@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>JSSample</title>
+</head>
+<body>
+    <label for="pictureUrl">請輸入網址:</label>
+    <input id="pictureUrl" type="text" value="https://lp-cms-production.imgix.net/news/2019/01/shutterstockRF_1037036482.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850g" />
+    <button onclick="AnalyzePicture()">分析</button><br/>
+    <img id="imgPreview" src="images/NoImage.png" style="width:800px;height:600px"/>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        var endpointUri = "https://msit13300visionservice.cognitiveservices.azure.com/vision/v3.2/analyze"
+        function AnalyzePicture() {
+            $("#imgPreview").attr('src', $("#pictureUrl").val());
+            var data = {
+                "url": $("#pictureUrl").val()
+            }
+            var params = {
+                // Request parameters
+                "visualFeatures": "Categories,Description",
+                "details": "Landmarks",
+                "language": "en",
+            };
+            $.ajax({
+                url: `${endpointUri}?` + $.param(params),
+                beforeSend: function (xhrObj) {
+                    xhrObj.setRequestHeader("Content-Type", "application/json");
+                    xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", "fd9701c6d2214f4cb5e820a6d221d300");
+                },
+                type: "POST",
+                data: JSON.stringify(data),
+            }).done(function (data) {
+                    //alert(JSON.stringify(data));
+                var text = data["description"]["captions"][0]["text"];
+                var confidence = data["description"]["captions"][0]["confidence"];
+                alert(`描述:${text}, 信心指數:${(confidence*100).toFixed(2)}%`);
+                }).fail(function (error) {
+                    alert(error.responseText);
+                });
+        }
+    </script>
+</body>
+</html>

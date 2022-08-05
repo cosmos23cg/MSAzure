@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "6f84fb62-6a47-4c80-a789-edfbd864244e": {
+      "ProjectGuid": "6f84fb62-6a47-4c80-a789-edfbd864244e",
+      "DisplayName": "JavaScriptFaceAPI",
+      "ColorIndex": 0
+    },
+    "72285ae0-d4f8-4f7a-8052-44f0e0a81c70": {
+      "ProjectGuid": "72285ae0-d4f8-4f7a-8052-44f0e0a81c70",
+      "DisplayName": "CSharpFaceAPI",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

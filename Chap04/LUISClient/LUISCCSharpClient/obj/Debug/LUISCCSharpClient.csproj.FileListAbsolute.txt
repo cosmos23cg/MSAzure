@@ -1,0 +1,13 @@
+E:\Python\Azure認知服務\Demo\Chap04\LUISClient\LUISCCSharpClient\bin\Debug\LUISCCSharpClient.exe.config
+E:\Python\Azure認知服務\Demo\Chap04\LUISClient\LUISCCSharpClient\bin\Debug\LUISCCSharpClient.exe
+E:\Python\Azure認知服務\Demo\Chap04\LUISClient\LUISCCSharpClient\bin\Debug\LUISCCSharpClient.pdb
+E:\Python\Azure認知服務\Demo\Chap04\LUISClient\LUISCCSharpClient\bin\Debug\Newtonsoft.Json.dll
+E:\Python\Azure認知服務\Demo\Chap04\LUISClient\LUISCCSharpClient\bin\Debug\Newtonsoft.Json.xml
+E:\Python\Azure認知服務\Demo\Chap04\LUISClient\LUISCCSharpClient\obj\Debug\LUISCCSharpClient.csproj.AssemblyReference.cache
+E:\Python\Azure認知服務\Demo\Chap04\LUISClient\LUISCCSharpClient\obj\Debug\LUISCCSharpClient.Form1.resources
+E:\Python\Azure認知服務\Demo\Chap04\LUISClient\LUISCCSharpClient\obj\Debug\LUISCCSharpClient.Properties.Resources.resources
+E:\Python\Azure認知服務\Demo\Chap04\LUISClient\LUISCCSharpClient\obj\Debug\LUISCCSharpClient.csproj.GenerateResource.cache
+E:\Python\Azure認知服務\Demo\Chap04\LUISClient\LUISCCSharpClient\obj\Debug\LUISCCSharpClient.csproj.CoreCompileInputs.cache
+E:\Python\Azure認知服務\Demo\Chap04\LUISClient\LUISCCSharpClient\obj\Debug\LUISCCSharpClient.csproj.CopyComplete
+E:\Python\Azure認知服務\Demo\Chap04\LUISClient\LUISCCSharpClient\obj\Debug\LUISCCSharpClient.exe
+E:\Python\Azure認知服務\Demo\Chap04\LUISClient\LUISCCSharpClient\obj\Debug\LUISCCSharpClient.pdb

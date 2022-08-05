@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "AudioConverter", "AudioConverter\AudioConverter.pyproj", "{EE4609B4-D902-47E5-AA63-3A8D351B477C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE4609B4-D902-47E5-AA63-3A8D351B477C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE4609B4-D902-47E5-AA63-3A8D351B477C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8703CF6-E413-4889-9684-CA6C081D498C}
+	EndGlobalSection
+EndGlobal

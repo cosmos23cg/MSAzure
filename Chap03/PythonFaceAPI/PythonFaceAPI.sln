@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PythonFaceAPI", "PythonFaceAPI\PythonFaceAPI.pyproj", "{BF612B0A-FB36-4F20-9F4E-170E71D186C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavaScriptFaceAPI", "JavaScriptFaceAPI\JavaScriptFaceAPI.csproj", "{6F84FB62-6A47-4C80-A789-EDFBD864244E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpFaceAPI", "CSharpFaceAPI\CSharpFaceAPI.csproj", "{72285AE0-D4F8-4F7A-8052-44F0E0A81C70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF612B0A-FB36-4F20-9F4E-170E71D186C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF612B0A-FB36-4F20-9F4E-170E71D186C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F84FB62-6A47-4C80-A789-EDFBD864244E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F84FB62-6A47-4C80-A789-EDFBD864244E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F84FB62-6A47-4C80-A789-EDFBD864244E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F84FB62-6A47-4C80-A789-EDFBD864244E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72285AE0-D4F8-4F7A-8052-44F0E0A81C70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72285AE0-D4F8-4F7A-8052-44F0E0A81C70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72285AE0-D4F8-4F7A-8052-44F0E0A81C70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72285AE0-D4F8-4F7A-8052-44F0E0A81C70}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2BF3117E-8888-4E5B-8150-4DE76BB51040}
+	EndGlobalSection
+EndGlobal

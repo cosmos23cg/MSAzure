@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"/>
+</head>
+<body>
+    <h1>Face Verification</h1>
+    <table class="table">
+        <tr>
+            <td>
+                <label for="face1">Face1</label>
+                <input type="file" id="face1" onchange="previewFace(this, $('#facePreview1'))" />
+                <img id="facePreview1" src="../images/default-avatar.jpg" style="width:640px;height:480px"/>
+            </td>
+            <td>
+                <label for="face1">Face2</label>
+                <input type="file" id="face2" onchange="previewFace(this, $('#facePreview2'))" />
+                <img id="facePreview2" src="../images/default-avatar.jpg" style="width:640px;height:480px"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><button id="btnCompareFace" onclick="compareFace()">Compare</button> </td>
+        </tr>
+        <tr>
+            <td colspan="2">        
+                <div>
+                    <label for="distance">Distance:</label>
+                    <input disabled value="-" id="distance" type="text" class="bold">
+                </div>
+            </td>
+        </tr>
+    </table>       
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="Scripts/face-api.js"></script>
+    <script src="Scripts/commons.js"></script>
+    <script src="Scripts/bbt.js"></script>
+    <script>
+        //face-api.js(https://justadudewhohacks.github.io/face-api.js/docs/index.html)
+        const threshold = 0.6;
+        let descriptors = { desc1: null, desc2: null };
+
+        function updateResult() {
+            const distance = faceapi.utils.round(
+                faceapi.euclideanDistance(descriptors.desc1, descriptors.desc2)
+            );
+            let text = distance;
+            let bgColor = '#ffffff';
+            if (distance > threshold) {
+                text += ' (no match)';
+                bgColor = '#ce7575';
+            }
+            $('#distance').val(text);
+            $('#distance').css('background-color', bgColor);
+        }
+
+        async function getFaceDescription(which, uri) {
+            const input = await faceapi.fetchImage(uri);
+            const imgEl = $(`#face${which}`).get(0);
+            imgEl.src = input.src;
+            descriptors[`desc${which}`] = await faceapi.computeFaceDescriptor(input);
+        }
+
+        async function compareFace() {
+            let modelsUrl = "https://raw.githubusercontent.com/justadudewhohacks/face-api.js/master/weights/";
+            await faceapi.nets.faceRecognitionNet.loadFromUri(modelsUrl + 'face_recognition_model-weights_manifest.json');
+
+            await getFaceDescription(1, $('#facePreview1').attr('src'));
+            await getFaceDescription(2, $('#facePreview2').attr('src'));
+            updateResult();
+        }
+        
+        function previewFace(file, img){
+            var reader = new FileReader();
+            reader.onload = function () {
+                var arrayBuffer = this.result;
+                var arrayBufferView = new Uint8Array(arrayBuffer);
+                var blob = new Blob([arrayBufferView], { type: "image/jpeg" });
+                var urlCreator = window.URL || window.webkitURL;
+                var imageUrl = urlCreator.createObjectURL(blob);
+                img.attr('src', imageUrl);
+            }
+            reader.readAsArrayBuffer(file.files[0]);
+        }
+    </script>
+</body>
+</html>

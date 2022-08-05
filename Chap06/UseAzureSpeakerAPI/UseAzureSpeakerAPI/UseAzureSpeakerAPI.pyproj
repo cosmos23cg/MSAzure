@@ -1,0 +1,53 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>d939e8e8-ae80-49e2-85e4-2eaf91a9da80</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>UseAzureSpeakerAPI</Name>
+    <RootNamespace>UseAzureSpeakerAPI</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CreateProfile.py" />
+    <Compile Include="DeleteProfile.py" />
+    <Compile Include="EnrollmentResponse.py" />
+    <Compile Include="EnrollProfile.py" />
+    <Compile Include="GetAllProfiles.py" />
+    <Compile Include="GetProfile.py" />
+    <Compile Include="IdentificationProfile.py" />
+    <Compile Include="IdentificationResponse.py" />
+    <Compile Include="IdentificationServiceHttpClientHelper.py" />
+    <Compile Include="IdentifyAudioFile.py" />
+    <Compile Include="ProfileCreationResponse.py" />
+    <Compile Include="ResetEnrollments.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+    <Content Include="Scripts.txt" />
+    <Content Include="Voice1-Mono.wav" />
+    <Content Include="WelcomeToTaiwan-Mono.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

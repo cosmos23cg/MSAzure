@@ -1,0 +1,10 @@
+D:\Python\Azure認知服務\Demo\Chap03\PythonFaceAPI\JavaScriptFaceAPI\bin\JavaScriptFaceAPI.dll.config
+D:\Python\Azure認知服務\Demo\Chap03\PythonFaceAPI\JavaScriptFaceAPI\bin\JavaScriptFaceAPI.dll
+D:\Python\Azure認知服務\Demo\Chap03\PythonFaceAPI\JavaScriptFaceAPI\bin\JavaScriptFaceAPI.pdb
+D:\Python\Azure認知服務\Demo\Chap03\PythonFaceAPI\JavaScriptFaceAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Python\Azure認知服務\Demo\Chap03\PythonFaceAPI\JavaScriptFaceAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Python\Azure認知服務\Demo\Chap03\PythonFaceAPI\JavaScriptFaceAPI\obj\Debug\JavaScriptFaceAPI.csproj.AssemblyReference.cache
+D:\Python\Azure認知服務\Demo\Chap03\PythonFaceAPI\JavaScriptFaceAPI\obj\Debug\JavaScriptFaceAPI.csproj.CoreCompileInputs.cache
+D:\Python\Azure認知服務\Demo\Chap03\PythonFaceAPI\JavaScriptFaceAPI\obj\Debug\JavaScriptFaceAPI.csproj.CopyComplete
+D:\Python\Azure認知服務\Demo\Chap03\PythonFaceAPI\JavaScriptFaceAPI\obj\Debug\JavaScriptFaceAPI.dll
+D:\Python\Azure認知服務\Demo\Chap03\PythonFaceAPI\JavaScriptFaceAPI\obj\Debug\JavaScriptFaceAPI.pdb

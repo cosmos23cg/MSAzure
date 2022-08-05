@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "SpeechRecognition", "SpeechRecognition\SpeechRecognition.pyproj", "{EF1F7EAF-9B1F-464C-91A9-89CE9605604E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpSpeechRecognition", "CSharpSpeechRecognition\CSharpSpeechRecognition.csproj", "{532B3104-7881-4E08-A53F-EA04B656486F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF1F7EAF-9B1F-464C-91A9-89CE9605604E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF1F7EAF-9B1F-464C-91A9-89CE9605604E}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{EF1F7EAF-9B1F-464C-91A9-89CE9605604E}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{EF1F7EAF-9B1F-464C-91A9-89CE9605604E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EF1F7EAF-9B1F-464C-91A9-89CE9605604E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EF1F7EAF-9B1F-464C-91A9-89CE9605604E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF1F7EAF-9B1F-464C-91A9-89CE9605604E}.Release|ARM.ActiveCfg = Release|Any CPU
+		{EF1F7EAF-9B1F-464C-91A9-89CE9605604E}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{EF1F7EAF-9B1F-464C-91A9-89CE9605604E}.Release|x64.ActiveCfg = Release|Any CPU
+		{EF1F7EAF-9B1F-464C-91A9-89CE9605604E}.Release|x86.ActiveCfg = Release|Any CPU
+		{532B3104-7881-4E08-A53F-EA04B656486F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{532B3104-7881-4E08-A53F-EA04B656486F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{532B3104-7881-4E08-A53F-EA04B656486F}.Debug|ARM.ActiveCfg = Debug|ARM
+		{532B3104-7881-4E08-A53F-EA04B656486F}.Debug|ARM.Build.0 = Debug|ARM
+		{532B3104-7881-4E08-A53F-EA04B656486F}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{532B3104-7881-4E08-A53F-EA04B656486F}.Debug|ARM64.Build.0 = Debug|ARM64
+		{532B3104-7881-4E08-A53F-EA04B656486F}.Debug|x64.ActiveCfg = Debug|x64
+		{532B3104-7881-4E08-A53F-EA04B656486F}.Debug|x64.Build.0 = Debug|x64
+		{532B3104-7881-4E08-A53F-EA04B656486F}.Debug|x86.ActiveCfg = Debug|Win32
+		{532B3104-7881-4E08-A53F-EA04B656486F}.Debug|x86.Build.0 = Debug|Win32
+		{532B3104-7881-4E08-A53F-EA04B656486F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{532B3104-7881-4E08-A53F-EA04B656486F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{532B3104-7881-4E08-A53F-EA04B656486F}.Release|ARM.ActiveCfg = Release|ARM
+		{532B3104-7881-4E08-A53F-EA04B656486F}.Release|ARM.Build.0 = Release|ARM
+		{532B3104-7881-4E08-A53F-EA04B656486F}.Release|ARM64.ActiveCfg = Release|ARM64
+		{532B3104-7881-4E08-A53F-EA04B656486F}.Release|ARM64.Build.0 = Release|ARM64
+		{532B3104-7881-4E08-A53F-EA04B656486F}.Release|x64.ActiveCfg = Release|x64
+		{532B3104-7881-4E08-A53F-EA04B656486F}.Release|x64.Build.0 = Release|x64
+		{532B3104-7881-4E08-A53F-EA04B656486F}.Release|x86.ActiveCfg = Release|Win32
+		{532B3104-7881-4E08-A53F-EA04B656486F}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01D7DE01-50C4-44A1-B33F-69AA91648BE6}
+	EndGlobalSection
+EndGlobal

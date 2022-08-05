@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-group">
+            <label class="control-label">內容:</label>
+            <input type="text" id="textInput" class="form-control" placeholder="想吃三小" />
+        </div>
+        <div class="form-group">
+            <button onclick="understanding()" class="btn btn-warning">判斷</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        var endpoint = 'https://aien1812luis.cognitiveservices.azure.com';
+        var appid = '6ca35243-b359-44ca-b71e-17e33d6b65be';
+        var key = 'ddd12123ad894f49af7c8120165913dd';
+        var query = $('#textInput').val();
+        var transEndpoint = 'https://api.cognitive.microsofttranslator.com/';
+        var transKey = 'a13d0676ecd74de8bd5cc3ebb06d9330';
+        var transRegion = 'westus2';
+        var region = 'westus2';
+        var params = 'to=zh-TW';
+        var transUrl = `${transEndpoint}/translate?api-version=3.0&${params}`;
+        var transHeaders = {
+            'Ocp-Apim-Subscription-Key': transKey,
+            'Ocp-Apim-Subscription-Region': region,
+            'Content-type': 'application/json'
+        };
+        function understanding() {
+            var query = $('#textInput').val();
+            //=========英翻中====================
+            var data = [{'text':query}];
+            $.ajax({
+                type:'POST',
+                url:transUrl,
+                data:JSON.stringify(data),
+                beforeSend:function(xhr){
+                    xhr.setRequestHeader('Ocp-Apim-Subscription-Key', transKey);
+                    xhr.setRequestHeader('Ocp-Apim-Subscription-Region', region);
+                }
+            }).done(function(data){
+                alert(JSON.stringify(data));
+            }).fail(function(){
+                alert(err.responseText)
+            })
+            transResponse = requests.post(transUrl, headers=transHeaders, json=data).json()
+            pprint(transResponse)
+            query = transResponse[0]['translations'][0]['text']
+            //==================================
+            var url = `${endpoint}/luis/prediction/v3.0/apps/${appid}/slots/staging/predict?verbose=true&show-all-intents=true&log=true&subscription-key=${key}&query=${query}`;
+            /* // method1
+            $.ajax({
+                type: 'GET',
+                url: url
+            }).done(function(data){
+                alert(JSON.stringify(data));
+            }).fail(function(err){
+                alert(err.responseText);
+            }); */
+            // method2
+            $.getJSON(url, function (data) {
+                // alert(JSON.stringify(data))
+                var topIntent = data['prediction']['topIntent'];
+                var confidence = data['prediction']['intents'][topIntent]['score'];
+                alert(`意象:${topIntent}, 信心指數:${(confidence * 100).toFixed(2)}`)
+            })
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>JSSample</title>
+</head>
+<body>
+    <label for="pictureUrl">請輸入網址:</label>
+    <input id="pictureUrl" type="text" value="https://www.ikea.com.tw/dairyfarm/tw/images/147/0814793_PE772712_S5.jpg" />
+    <button onclick="AnalyzePicture()">分析</button>
+    <div id="results"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        var endpointUri = "https://msit13000customvision.cognitiveservices.azure.com/customvision/v3.0/Prediction/b393f587-d055-4393-be7e-8306d105ffdb/classify/iterations/Iteration1/url"
+        function AnalyzePicture() {
+            var data = {
+                "url": $("#pictureUrl").val()
+            }
+            
+            $.ajax({
+                url: `${endpointUri}?`,
+                beforeSend: function (xhrObj) {
+                    xhrObj.setRequestHeader("Content-Type", "application/json");
+                    xhrObj.setRequestHeader("Prediction-Key", "d38fd02bc5de43bcb48ffb4464d85557");
+                },
+                type: "POST",
+                data: JSON.stringify(data),
+            }).done(function (data) {
+                    $("#results").text(JSON.stringify(data))
+                }).fail(function (error) {
+                    alert(error.statusCode);
+                });
+        }
+    </script>
+</body>
+</html>

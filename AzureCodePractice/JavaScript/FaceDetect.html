@@ -1,0 +1,77 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-group">
+            <label class="control-label">Image URL:</label>
+            <input id="faceUrl" type="text" class="form-control"
+                value="https://doqvf81n9htmm.cloudfront.net/data/crop_article/91525/1.jpg_1140x855.jpg">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success" onclick="faceDetect()">Detect</button>
+        </div>
+        <div class="form-group">
+            <img id="imageDetected" src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"/>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        function faceDetect() {
+            $("#imageDetected").attr('src', $('#faceUrl').val())
+            var params = {
+                // Request parameters
+                'returnFaceId': 'true',
+                'returnFaceLandmarks': 'false',
+                'returnFaceAttributes': 'age,gender,smile,emotion',
+                'recognitionModel': 'recognition_04',
+                'returnRecognitionModel': 'false',
+                'detectionModel': 'detection_01',
+                'faceIdTimeToLive': '86400',
+            };
+            var data = {
+                'url':$("#faceUrl").val()
+            }
+            $.ajax({
+                url: "https://aien1800faceservice.cognitiveservices.azure.com/face/v1.0/detect?" + $.param(params),
+                beforeSend: function (xhrObj) {
+                    // Request headers
+                    xhrObj.setRequestHeader("Content-Type", "application/json");
+                    xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", "a89b678b09f04424a4c8d40615896dd3");
+                },
+                type: "POST",
+                // Request body
+                data: JSON.stringify(data),
+            })
+                .done(function (data) {
+                    // alert(JSON.stringify(data));
+                    var gender = data[0]['faceAttributes']['gender'];
+                    var age = data[0]['faceAttributes']['age'];
+                    var emotion = data[0]['faceAttributes']['emotion'];
+                    var maxemotion = "";
+                    var maxconfidence = 0;
+                    $.each(emotion, function(name, value){
+                        if (value > maxconfidence){
+                            maxemotion=name;
+                            maxconfidence=value
+                        }
+                    });
+                    alert(`Age:${age}, Gender:${gender}, Emotion:${maxemotion}, Confidence:${(maxconfidence*100).toFixed(2)}%`)
+                })
+                .fail(function (err) {
+                    alert(err.responseText);
+                });
+        }
+    </script>
+</body>
+
+</html>

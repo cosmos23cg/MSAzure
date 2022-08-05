@@ -1,0 +1,13 @@
+F:\Python\Azure認知服務\Demo\Chap03\PythonFaceAPI\CSharpFaceAPI\bin\Debug\CSharpFaceAPI.exe.config
+F:\Python\Azure認知服務\Demo\Chap03\PythonFaceAPI\CSharpFaceAPI\bin\Debug\CSharpFaceAPI.exe
+F:\Python\Azure認知服務\Demo\Chap03\PythonFaceAPI\CSharpFaceAPI\bin\Debug\CSharpFaceAPI.pdb
+F:\Python\Azure認知服務\Demo\Chap03\PythonFaceAPI\CSharpFaceAPI\bin\Debug\Newtonsoft.Json.dll
+F:\Python\Azure認知服務\Demo\Chap03\PythonFaceAPI\CSharpFaceAPI\bin\Debug\Newtonsoft.Json.xml
+F:\Python\Azure認知服務\Demo\Chap03\PythonFaceAPI\CSharpFaceAPI\obj\Debug\CSharpFaceAPI.csprojAssemblyReference.cache
+F:\Python\Azure認知服務\Demo\Chap03\PythonFaceAPI\CSharpFaceAPI\obj\Debug\CSharpFaceAPI.Form1.resources
+F:\Python\Azure認知服務\Demo\Chap03\PythonFaceAPI\CSharpFaceAPI\obj\Debug\CSharpFaceAPI.Properties.Resources.resources
+F:\Python\Azure認知服務\Demo\Chap03\PythonFaceAPI\CSharpFaceAPI\obj\Debug\CSharpFaceAPI.csproj.GenerateResource.cache
+F:\Python\Azure認知服務\Demo\Chap03\PythonFaceAPI\CSharpFaceAPI\obj\Debug\CSharpFaceAPI.csproj.CoreCompileInputs.cache
+F:\Python\Azure認知服務\Demo\Chap03\PythonFaceAPI\CSharpFaceAPI\obj\Debug\CSharpFaceAPI.csproj.CopyComplete
+F:\Python\Azure認知服務\Demo\Chap03\PythonFaceAPI\CSharpFaceAPI\obj\Debug\CSharpFaceAPI.exe
+F:\Python\Azure認知服務\Demo\Chap03\PythonFaceAPI\CSharpFaceAPI\obj\Debug\CSharpFaceAPI.pdb

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<speak version="1.0" xmlns="https://www.w3.org/2001/10/synthesis" xml:lang="en-US">
+    <voice name="en-GB-George-Apollo">
+        <prosody rate="0.9">
+            When you're on the motorway,<break time="200ms" /> it's a good idea to use a sat-nav.
+        </prosody>
+    </voice>
+</speak>

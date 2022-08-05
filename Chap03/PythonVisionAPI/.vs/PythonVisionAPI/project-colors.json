@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "71dc9e6b-0cb4-4162-b44d-ef0f26845bb6": {
+      "ProjectGuid": "71dc9e6b-0cb4-4162-b44d-ef0f26845bb6",
+      "DisplayName": "CSharpVisionAPI",
+      "ColorIndex": 0
+    },
+    "8b834191-be46-45a5-a832-3a85f024d32b": {
+      "ProjectGuid": "8b834191-be46-45a5-a832-3a85f024d32b",
+      "DisplayName": "JavaScriptClient",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

@@ -1,0 +1,17 @@
+FaceDetection
+key1: afbe41bee276472a84390905619a7c7d
+key2: 1cf8a397ef2e4c18bc939819724d9235
+Endpoint: https://aien1812faceservice.cognitiveservices.azure.com/
+位置/區域:eastus
+
+Vision
+key1: 8dea9581759940a4b8dc02d57764c25d
+key2: 165aa856bb574e879c05098c5bc0842b
+Endpoint: https://aien1812vision1.cognitiveservices.azure.com/
+位置/區域: eastasia
+
+
+key1: 
+key2: 
+Endpoint: 
+位置/區域:

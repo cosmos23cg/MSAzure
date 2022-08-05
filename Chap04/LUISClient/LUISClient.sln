@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LUISClient", "LUISClient\LUISClient.csproj", "{01311F8E-B659-4BFA-88BD-32256EBB8B15}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "LUISPythonClient", "LUISPythonClient\LUISPythonClient.pyproj", "{C608CB3A-DC66-453A-AEA8-C3FDBAF193B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LUISCCSharpClient", "LUISCCSharpClient\LUISCCSharpClient.csproj", "{2372FEB5-868C-4A14-8A5A-6BA60B4BA28A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01311F8E-B659-4BFA-88BD-32256EBB8B15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01311F8E-B659-4BFA-88BD-32256EBB8B15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01311F8E-B659-4BFA-88BD-32256EBB8B15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01311F8E-B659-4BFA-88BD-32256EBB8B15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C608CB3A-DC66-453A-AEA8-C3FDBAF193B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C608CB3A-DC66-453A-AEA8-C3FDBAF193B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2372FEB5-868C-4A14-8A5A-6BA60B4BA28A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2372FEB5-868C-4A14-8A5A-6BA60B4BA28A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2372FEB5-868C-4A14-8A5A-6BA60B4BA28A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2372FEB5-868C-4A14-8A5A-6BA60B4BA28A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FEF086F9-DCBB-46AE-A62F-07D64D031B4C}
+	EndGlobalSection
+EndGlobal

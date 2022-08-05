@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "UseAzureSpeakerAPI", "UseAzureSpeakerAPI\UseAzureSpeakerAPI.pyproj", "{D939E8E8-AE80-49E2-85E4-2EAF91A9DA80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpSpeakerRecognition", "CSharpSpeakerRecognition\CSharpSpeakerRecognition.csproj", "{6C3D289D-D940-44CF-AED4-3B628243E9B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D939E8E8-AE80-49E2-85E4-2EAF91A9DA80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D939E8E8-AE80-49E2-85E4-2EAF91A9DA80}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D939E8E8-AE80-49E2-85E4-2EAF91A9DA80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D939E8E8-AE80-49E2-85E4-2EAF91A9DA80}.Release|x64.ActiveCfg = Release|Any CPU
+		{6C3D289D-D940-44CF-AED4-3B628243E9B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C3D289D-D940-44CF-AED4-3B628243E9B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C3D289D-D940-44CF-AED4-3B628243E9B3}.Debug|x64.ActiveCfg = Debug|x64
+		{6C3D289D-D940-44CF-AED4-3B628243E9B3}.Debug|x64.Build.0 = Debug|x64
+		{6C3D289D-D940-44CF-AED4-3B628243E9B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C3D289D-D940-44CF-AED4-3B628243E9B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C3D289D-D940-44CF-AED4-3B628243E9B3}.Release|x64.ActiveCfg = Release|x64
+		{6C3D289D-D940-44CF-AED4-3B628243E9B3}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97B35D72-C35F-4F8B-A9D1-0D013B0E85AA}
+	EndGlobalSection
+EndGlobal

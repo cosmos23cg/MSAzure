@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{a4172c42-14d1-4268-b0b9-1b076c2e5fe0}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>SpeakerRecognize.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+    <Content Include="test\s1.wav" />
+    <Content Include="test\s10.wav" />
+    <Content Include="test\s2.wav" />
+    <Content Include="test\s3.wav" />
+    <Content Include="test\s4.wav" />
+    <Content Include="test\s5.wav" />
+    <Content Include="test\s6.wav" />
+    <Content Include="test\s7.wav" />
+    <Content Include="test\s8.wav" />
+    <Content Include="test\s9.wav" />
+    <Content Include="train\s1.wav" />
+    <Content Include="train\s10.wav" />
+    <Content Include="train\s2.wav" />
+    <Content Include="train\s3.wav" />
+    <Content Include="train\s4.wav" />
+    <Content Include="train\s5.wav" />
+    <Content Include="train\s6.wav" />
+    <Content Include="train\s7.wav" />
+    <Content Include="train\s8.wav" />
+    <Content Include="train\s9.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LBG.py" />
+    <Compile Include="LPC.py" />
+    <Compile Include="mel_coefficients.py" />
+    <Compile Include="spectrogram.py" />
+    <Compile Include="SpeakerRecognize.py" />
+    <Compile Include="train.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="test\" />
+    <Folder Include="train\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

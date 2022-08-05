@@ -1,0 +1,13 @@
+1. Create a user profile: 
+   python CreateProfile.py a7510db74a424227b5b86370fa3b7364
+   identificationProfileId ==> 8cf38c01-74ea-4741-8d2c-37c98c3c41fd
+2. Enroll user profile: 
+   python EnrollProfile.py a7510db74a424227b5b86370fa3b7364 8cf38c01-74ea-4741-8d2c-37c98c3c41fd Voice1-Mono.wav true
+
+3. Get all profiles: 
+   python GetAllProfiles.py a7510db74a424227b5b86370fa3b7364
+
+4. Identify Audio File: 
+   python IdentifyAudioFile.py a7510db74a424227b5b86370fa3b7364 WelcomeToTaiwan-Mono.wav true 8cf38c01-74ea-4741-8d2c-37c98c3c41fd
+
+5. python DeleteProfile.py a7510db74a424227b5b86370fa3b7364 307618e2-6e58-4fba-849c-a1c2ed875e3c

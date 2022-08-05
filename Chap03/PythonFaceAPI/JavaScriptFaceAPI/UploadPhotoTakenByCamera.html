@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+</head>
+<body>
+    <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <th align="center">WebCam鏡頭</th>
+            <th align="center">快照</th>
+        </tr>
+        <tr>
+            <td><div id="webcam"></div></td>
+            <td><img id="imgCapture"/></td>
+        </tr>
+        <tr>
+            <td align="center">
+                <input type="button" id="btnCapture" value="Capture"/>
+            </td>
+            <td align="center">
+                <input type="button" id="btnAnalyze" value="分析" disabled="disabled"/>
+            </td>
+        </tr>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+    <script>
+        $(function () {
+            Webcam.set({
+                width: 320,
+                height: 240,
+                image_format: 'jpeg',
+                jpeg_quality: 90
+            });
+            Webcam.attach('#webcam');
+            var imageData = null;
+            $("#btnCapture").click(function () {
+                Webcam.snap(function (data_uri) {
+                    imageData = data_uri;
+                    $("#imgCapture")[0].src = imageData;
+                    $("#btnAnalyze").removeAttr("disabled");
+                });
+            });
+            $("#btnAnalyze").click(function () {
+                var params = {
+                    'returnFaceId': 'true',
+                    'returnFaceLandmarks': 'false',
+                    'returnFaceAttributes': 'age,gender,emotion',
+                    'recognitionModel': 'recognition_01',
+                    'returnRecognitionModel': 'false',
+                    'detectionModel': 'detection_01',
+                    'faceIdTimeToLive': '86400',
+                };
+                var endpointUri = "https://myazurefaceservice.cognitiveservices.azure.com/face/v1.0/detect"
+                const byteCharacters = atob(imageData.replace(/^data:image\/(png|jpeg|jpg);base64,/, ''));
+                const byteNumbers = new Array(byteCharacters.length);
+                for (let i = 0; i < byteCharacters.length; i++) {
+                    byteNumbers[i] = byteCharacters.charCodeAt(i);
+                }
+                var byteArray = new Uint8Array(byteNumbers);
+                var blob = new Blob([byteArray], {
+                    type: undefined
+                });
+                $.ajax({
+                    type: "POST",
+                    url: `${endpointUri}?` + $.param(params),
+                    beforeSend: function (xhrObj) {
+                        xhrObj.setRequestHeader("Content-Type", "application/octet-stream");
+                        xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", "4d8286f925894a94a35bafa6fe60a9d5");
+                    },
+                    processData: false,
+                    data: blob,
+                }).done(function (data) {
+                    //alert(JSON.stringify(data));
+                    var age = data[0]["faceAttributes"]["age"];
+                    var gender = data[0]["faceAttributes"]["gender"];
+                    var emotion = data[0]["faceAttributes"]["emotion"];
+                    var maxEmotion = 0;
+                    var maxEmotionName = "";
+                    $.each(emotion, function (name, value) {
+                        if (value > maxEmotion) {
+                            maxEmotion = value;
+                            maxEmotionName = name;
+                        }
+                    });
+                    alert(`年齡:${age}, 性別:${gender}, 情緒:${maxEmotionName}, 信心指數:${(maxEmotion * 100).toFixed(2)}%`)
+                }).fail(function (err) {
+                    alert(err.responseText)
+                });
+            });
+        });
+    </script>
+</body>
+</html>

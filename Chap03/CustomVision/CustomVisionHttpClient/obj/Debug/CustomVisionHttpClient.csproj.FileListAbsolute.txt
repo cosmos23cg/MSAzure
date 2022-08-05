@@ -1,0 +1,10 @@
+F:\Python\Azure認知服務\Demo\Chap03\CustomVision\CustomVisionHttpClient\bin\CustomVisionHttpClient.dll.config
+F:\Python\Azure認知服務\Demo\Chap03\CustomVision\CustomVisionHttpClient\bin\CustomVisionHttpClient.dll
+F:\Python\Azure認知服務\Demo\Chap03\CustomVision\CustomVisionHttpClient\bin\CustomVisionHttpClient.pdb
+F:\Python\Azure認知服務\Demo\Chap03\CustomVision\CustomVisionHttpClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Python\Azure認知服務\Demo\Chap03\CustomVision\CustomVisionHttpClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Python\Azure認知服務\Demo\Chap03\CustomVision\CustomVisionHttpClient\obj\Debug\CustomVisionHttpClient.csprojAssemblyReference.cache
+F:\Python\Azure認知服務\Demo\Chap03\CustomVision\CustomVisionHttpClient\obj\Debug\CustomVisionHttpClient.csproj.CoreCompileInputs.cache
+F:\Python\Azure認知服務\Demo\Chap03\CustomVision\CustomVisionHttpClient\obj\Debug\CustomVisionHttpClient.csproj.CopyComplete
+F:\Python\Azure認知服務\Demo\Chap03\CustomVision\CustomVisionHttpClient\obj\Debug\CustomVisionHttpClient.dll
+F:\Python\Azure認知服務\Demo\Chap03\CustomVision\CustomVisionHttpClient\obj\Debug\CustomVisionHttpClient.pdb
